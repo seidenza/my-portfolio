@@ -1,25 +1,18 @@
 format: jb-book
 root: intro
 
-defaults:
-  numbered: true
-  titlesonly: true
-
-
-
-
 parts:
-- caption: Tutorials test 
-  chapters:
-  - file: PHY415/0_syllabus
-    sections:
-    - file: PHY415/1_goals
-    - file: PHY415/2_design
-  - file: PHY415/0_course/4_rubric
+  - caption: Tutorials test
+    chapters:
+      - file: PHY415/0_syllabus
+        sections:
+          - file: PHY415/1_goals
+          - file: PHY415/2_design
+      - file: PHY415/0_course/4_rubric
 
-- caption: Topic Guides
-  chapters:
-  - file: PHY415/1_mechanics/sho/notes-SHO
-    sections:
-    - file: PHY415/1_mechanics/modeling/activity-what_is_a_model
-    - file: PHY415/1_mechanics/lagrangian/activity-frames    
+  - caption: Topic Guides
+    chapters:
+      - file: PHY415/1_mechanics/sho/notes-SHO
+        sections:
+          - file: PHY415/1_mechanics/modeling/activity-what_is_a_model
+          - file: PHY415/1_mechanics/lagrangian/activity-frames
