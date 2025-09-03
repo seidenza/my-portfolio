@@ -52,3 +52,11 @@ html:
     name: "sphinx_book_theme"
     options:
       collapse_navigation: true
+
+
+sphinx:
+  config:
+    html_theme_options:
+      # This disables numbering in sidebar and main content
+      numbered: false
+
