@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2 Nov 23 - Activity: Automated Signal Deconstruction &amp; Reconstruction &#8212; PHY 415 Fall 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY415/3_waves/activity-Waves-seriesExpand';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY 415 Fall 2023</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Home poage
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials test</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../0_syllabus.html">Syllabus and Overview of PHY 415</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_goals.html">1. Course Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_design.html">2. Course Design</a></li>
+
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../0_course/4_rubric.html">6. Project Rubrics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../1_mechanics/sho/notes-SHO.html">29 Aug 23 - Notes: Simple Harmonic Oscillator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../1_mechanics/modeling/activity-what_is_a_model.html">4. 29 Aug 23 - Activity: What is a Model?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_mechanics/lagrangian/activity-frames.html">5. 31 Aug 23 - Activity: Frames and Coordinates</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyterhub.egr.msu.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/executablebooks/jupyter-book&urlpath=lab/tree/jupyter-book/PHY415/3_waves/activity-Waves-seriesExpand.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com""/github/executablebooks/jupyter-book/blob/master/PHY415/3_waves/activity-Waves-seriesExpand.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/PHY415/3_waves/activity-Waves-seriesExpand.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2 Nov 23 - Activity: Automated Signal Deconstruction & Reconstruction</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-calculation">Analytical Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automating-the-calculation">Automating the Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-relationship">Physics Relationship</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-matching">Decomposition Matching</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="nov-23-activity-automated-signal-deconstruction-reconstruction">
+<h1>2 Nov 23 - Activity: Automated Signal Deconstruction &amp; Reconstruction<a class="headerlink" href="#nov-23-activity-automated-signal-deconstruction-reconstruction" title="Link to this heading">#</a></h1>
+<p>We found that it was possible to use the Fourier transform to decompose the signal into its constituent frequencies. Later we will use this idea to build up the <a class="reference external" href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a> (FFT) algorithm. For now, we will write everything out in full to mirror our analytical work.</p>
+<p>We will start with the same signal as before, but then you will work with other signals to achieve a particular signal decomposition.</p>
+<p>Recall that the sign was given by the square wave function:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V(t) = \begin{cases} 0 &amp; \text{if } 0 \leq t \leq \frac{T}{2} \\ V_0 &amp; \text{if } \frac{T}{2} &lt; t \leq T \end{cases}\end{split}\]</div>
+<p>We define the approximate form of the signal using the complex form of the Fourier series:</p>
+<div class="math notranslate nohighlight">
+\[V(t) = \sum_{-\infty}^{+\infty} c_n e^{i n \omega_0 t}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\omega_0 = \frac{2 \pi}{T_0}\)</span> and <span class="math notranslate nohighlight">\(c_n\)</span> is the Fourier coefficient given by:</p>
+<div class="math notranslate nohighlight">
+\[c_n = \frac{1}{T_0} \int_{0}^{T_0} V(t) e^{-i n \omega_0 t} dt\]</div>
+<p>Remember that we use the real <span class="math notranslate nohighlight">\(V(t)\)</span> to compute the complex <span class="math notranslate nohighlight">\(c_n\)</span>. And once we have found the <span class="math notranslate nohighlight">\(c_n\)</span> we can reconstruct the signal using the series expansion.</p>
+<div class="math notranslate nohighlight">
+\[V(t) \approx V_{approx}(t) = \sum_{-N}^{+N} c_n e^{i n \omega_0 t}\]</div>
+<p>where <span class="math notranslate nohighlight">\(N\)</span> is the number of terms we use in the series expansion.</p>
+<section id="analytical-calculation">
+<h2>Analytical Calculation<a class="headerlink" href="#analytical-calculation" title="Link to this heading">#</a></h2>
+<p><strong>✅ Do this</strong></p>
+<ol class="arabic simple">
+<li><p>Take the signal <span class="math notranslate nohighlight">\(V(t)\)</span> and determine which integrals you have to do.</p></li>
+<li><p>Construct the integrals you need to do (over what cycle are you integrating?).</p></li>
+<li><p>Perform the integrals (consider using <code class="docutils literal notranslate"><span class="pre">sympy</span></code>) and find the coefficients <span class="math notranslate nohighlight">\(c_n\)</span>’s.</p></li>
+<li><p>Write the function <span class="math notranslate nohighlight">\(V(t)\)</span> in terms of the <span class="math notranslate nohighlight">\(c_n\)</span>’s. (What about the imaginary part?)</p></li>
+</ol>
+</section>
+<section id="automating-the-calculation">
+<h2>Automating the Calculation<a class="headerlink" href="#automating-the-calculation" title="Link to this heading">#</a></h2>
+<p>This is a lot of work to do by hand, and we have to perform new integrals every time we want to find this decomposition. We can automate this process using a little code. We have to break the process up into a few steps.</p>
+<ol class="arabic simple">
+<li><p>Define the signal <span class="math notranslate nohighlight">\(V(t)\)</span>.</p>
+<ul class="simple">
+<li><p>Here you need to make sure you have a function that can be evaluated for any <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
+<li><p>You should also be able to change that function easily for different signals.</p></li>
+</ul>
+</li>
+<li><p>Compute the Fourier coefficient <span class="math notranslate nohighlight">\(c_n\)</span> for a given <span class="math notranslate nohighlight">\(n\)</span>.</p>
+<ul class="simple">
+<li><p>Here you need to perform an integral of <span class="math notranslate nohighlight">\(V(t)e^{-i n \omega_0 t}\)</span> over the period <span class="math notranslate nohighlight">\(T_0\)</span>. \</p></li>
+<li><p>It would be good to use a builtin integrator like <code class="docutils literal notranslate"><span class="pre">numpy.trapz</span></code> or <code class="docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code> to do this.</p></li>
+<li><p>The documentation for numpy.trapz can be found <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.trapz.html">here</a> and the documentation for scipy.integrate.quad can be found <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html">here</a>.</p></li>
+</ul>
+</li>
+<li><p>Compute the approximation <span class="math notranslate nohighlight">\(V_{approx}(t)\)</span> up to a given <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ul class="simple">
+<li><p>Here you need a complex array to take on the approximate values for <span class="math notranslate nohighlight">\(V(t)\)</span>.</p></li>
+<li><p>You will need to loop over the <span class="math notranslate nohighlight">\(n\)</span> values and add the contribution from each <span class="math notranslate nohighlight">\(c_n\)</span> to the array.</p></li>
+<li><p>Return the real part of the array to get the approximation.</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>✅ Do this</strong></p>
+<ol class="arabic simple">
+<li><p>Review the code scaffold below and make sure you understand what is happening.</p></li>
+<li><p>Complete the code below to compute the Fourier coefficients <span class="math notranslate nohighlight">\(c_n\)</span> for a given <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>Complete the code below to compute the approximation <span class="math notranslate nohighlight">\(V_{approx}(t)\)</span> up to a given <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p>Test your code with the provided signal and plot the approximation for different values of <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p>Write function that plots your real and approximate signal on the same plot.</p></li>
+<li><p>Write a function that plots the magnitude of Fourier coefficients <span class="math notranslate nohighlight">\(c_n\)</span> as a function of <span class="math notranslate nohighlight">\(n\omega_0\)</span>.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">square</span>
+
+<span class="c1"># Compute the Fourier coefficient</span>
+<span class="k">def</span> <span class="nf">compute_cn</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">f0</span><span class="p">):</span>
+    
+    <span class="c1">## CODE HERE ##</span>
+    
+    <span class="k">return</span> <span class="n">cn</span>
+
+<span class="c1"># Fourier series expansion using complex form</span>
+<span class="k">def</span> <span class="nf">complex_fourier_series_expansion</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
+    <span class="n">f0</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">T</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">complex</span><span class="p">)</span>
+
+    <span class="c1">## CODE HERE ##</span>
+        
+    <span class="k">return</span> <span class="n">series</span><span class="o">.</span><span class="n">real</span>
+
+<span class="c1"># Define the square wave signal</span>
+<span class="n">T</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>  <span class="c1"># Period</span>
+<span class="k">def</span> <span class="nf">v</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">square</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="physics-relationship">
+<h2>Physics Relationship<a class="headerlink" href="#physics-relationship" title="Link to this heading">#</a></h2>
+<p>You might be wondering why we do this kind of deconstruction and what it is used for. It turns out that for many systems this kind of analysis tells you how energy, momentum, and other quantities might be distributed in the system. For example, the analogy to a complex quantum mechanical system might be the various occupied energy states of the system. The known frequencies could correspond to the energy levels of the system. The Fourier coefficients tell you how much of the system is in each energy state. There are many such analogies in physics; and many such transformations in multiple dimensions to extract this information. Fourier is just one of the most common.</p>
+</section>
+<section id="decomposition-matching">
+<h2>Decomposition Matching<a class="headerlink" href="#decomposition-matching" title="Link to this heading">#</a></h2>
+<p>We want to develop your intuition for this kind of analysis now that you have started to develop the tools to do it. So we will ask you to use your code to perform a few tasks. But these will start from the expected coefficients and ask you to find the signal. This is the reverse of what we have done so far. With your code you should be able to play and adjust the signal to match the coefficients qualitatively.</p>
+<p><strong>✅ Do this</strong></p>
+<p>Use your code to find the signal that matches the following coefficients:</p>
+<ol class="arabic simple">
+<li><p>No odd coefficients.</p></li>
+<li><p>No even coefficients.</p></li>
+<li><p>Only the <span class="math notranslate nohighlight">\(n=1\)</span> coefficient.</p></li>
+<li><p>Only the <span class="math notranslate nohighlight">\(n=2\)</span> coefficient.</p></li>
+<li><p>High values for low <span class="math notranslate nohighlight">\(n\)</span> and low values for high <span class="math notranslate nohighlight">\(n\)</span> (not too high).</p></li>
+<li><p>Low values for low <span class="math notranslate nohighlight">\(n\)</span> and high values for high <span class="math notranslate nohighlight">\(n\)</span> (not too high).</p></li>
+<li><p>Roughly equal values for all <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ol>
+<p>In doing this, take note of the signals you are making. What are you doing to construct them to produce this kind of output. What kind of device or physical system might produce those signals?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY415/3_waves"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-calculation">Analytical Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#automating-the-calculation">Automating the Calculation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#physics-relationship">Physics Relationship</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition-matching">Decomposition Matching</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Caroline Seidenzahl
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
