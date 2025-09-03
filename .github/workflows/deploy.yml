@@ -1,0 +1,20 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main  # or 'master' if that's your branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - run: pip install -r requirements.txt
+      - run: pip install jupyter-book ghp-import
+      - run: jupyter-book build .
+      - run: ghp-import -n -p -f _build/html
