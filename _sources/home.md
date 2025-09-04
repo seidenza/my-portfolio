@@ -1,4 +1,4 @@
-# Notebook of Junk
+# PHY 415 Stuff
 
 Welcome, Caroline. 
 
