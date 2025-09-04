@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3 Oct 23 - Notes: Electric Potential - a scalar field &#8212; PHY 415 Fall 2023</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'PHY415/2_EM/Statics/notes-electric_potential';</script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PHY 415 Fall 2023</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Home poage
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Tutorials test</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../0_syllabus.html">Syllabus and Overview of PHY 415</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1_goals.html">Course Objectives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../2_design.html">Course Design</a></li>
+
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../0_course/4_rubric.html">Project Rubrics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../1_mechanics/sho/notes-SHO.html">29 Aug 23 - Notes: Simple Harmonic Oscillator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../1_mechanics/modeling/activity-what_is_a_model.html">29 Aug 23 - Activity: What is a Model?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../1_mechanics/lagrangian/activity-frames.html">31 Aug 23 - Activity: Frames and Coordinates</a></li>
+</ul><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://jupyterhub.egr.msu.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/executablebooks/jupyter-book&urlpath=lab/tree/jupyter-book/PHY415/2_EM/Statics/notes-electric_potential.ipynb&branch=master" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on JupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="JupyterHub logo" src="../../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com""/github/executablebooks/jupyter-book/blob/master/PHY415/2_EM/Statics/notes-electric_potential.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/PHY415/2_EM/Statics/notes-electric_potential.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3 Oct 23 - Notes: Electric Potential - a scalar field</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatics">Electrostatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-to-laplace-s-equation">Getting to Laplace’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-problem">A typical problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-variables">Separation of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-coordinate-systems">Other Coordinate Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textbook-chapter">Textbook Chapter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#videos-derivations">Videos Derivations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#possion-s-and-laplace-s-equation">Possion’s and Laplace’s Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Separation of Variables</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handwritten-notes">Handwritten Notes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="oct-23-notes-electric-potential-a-scalar-field">
+<h1>3 Oct 23 - Notes: Electric Potential - a scalar field<a class="headerlink" href="#oct-23-notes-electric-potential-a-scalar-field" title="Link to this heading">#</a></h1>
+<p>We’ve seen that there’s a lot of challenges with solving field problems where the fields are vectors and described by partial differential equations. The electric and magnetic field are vector fields that have a size and direction are every points in space. They are described by a set of 4 partial differential equations, <a class="reference external" href="https://en.wikipedia.org/wiki/Maxwell%27s_equations">Maxwell’s Equations</a>. In Cartesian coordinates, these equations are described by 8 coupled partial differential equations.</p>
+<section id="electrostatics">
+<h2>Electrostatics<a class="headerlink" href="#electrostatics" title="Link to this heading">#</a></h2>
+<p>In electrostatic situations, where charges don’t move, we’ve seen that the equations that describe the electric field are simplified to:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{E} = \frac{\rho}{\epsilon_0}\]</div>
+<div class="math notranslate nohighlight">
+\[\nabla \times \vec{E} = 0\]</div>
+<p>In general, in Cartesian coordinates, these are still four partial differential equations. However, the electric field is <a class="reference external" href="https://en.wikipedia.org/wiki/Curl_(mathematics)">curl-less</a>, so we can write it as the gradient of a scalar field, <span class="math notranslate nohighlight">\(V\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\vec{E}(x,y,z) = -\nabla V(x,y,z)\]</div>
+<p>We might prefer to work with this scalar field, <span class="math notranslate nohighlight">\(V\)</span>, rather than the vector field, <span class="math notranslate nohighlight">\(\vec{E}\)</span>, because it is a simpler object to work with. There’s a number of tools we can use to find the potential and then we take the gradient to find the electric field.</p>
+<section id="electric-potential">
+<h3>Electric Potential<a class="headerlink" href="#electric-potential" title="Link to this heading">#</a></h3>
+<p>Parth G has a really nice video on the conceptual elements of electric potential, we will concern ourselves with more mathematical aspects as we move forward.</p>
+<p><a class="reference external" href="https://inv.tux.pizza/watch?v=7rjAtuwxrEA"><img alt="Electric Potential" src="https://markdown-videos-api.jorgenkh.no/youtube/7rjAtuwxrEA?width=720&amp;height=405" /></a></p>
+<ul class="simple">
+<li><p>Non-Commercial Link: <a class="reference external" href="https://inv.tux.pizza/watch?v=7rjAtuwxrEA">https://inv.tux.pizza/watch?v=7rjAtuwxrEA</a></p></li>
+<li><p>Commercial Link: <a class="reference external" href="https://youtube.com/watch?v=7rjAtuwxrEA">https://youtube.com/watch?v=7rjAtuwxrEA</a></p></li>
+</ul>
+<p>The <a class="reference external" href="https://en.wikipedia.org/wiki/Electric_potential">electric potential</a> is the scalar field that we have developed. One thing to note about it, is that it is only defined up to a constant. That is because when we take the gradient, and constant will drop out. This is really important when stitching together solutions from multiple sources. They need to all have the same “zero of potential.”</p>
+<p>With the definition, <span class="math notranslate nohighlight">\(\vec{E}(x,y,z) = -\nabla V(x,y,z)\)</span>, we can conclude the following:</p>
+<div class="math notranslate nohighlight">
+\[\nabla \cdot \vec{E} = \nabla \cdot (-\nabla V) = -\nabla^2 V = \frac{\rho}{\epsilon_0}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\nabla^2\)</span> is the <a class="reference external" href="https://en.wikipedia.org/wiki/Laplace_operator">Laplacian operator</a>. This is <a class="reference external" href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson’s Equation</a>, a well-studied second order partial differential equation. When used in electrostatics, it is a central equation for solving for the electric potential. In addition, we can integrate to show that:</p>
+<div class="math notranslate nohighlight">
+\[\Delta V = -\int \vec{E} \cdot d\vec{l}\]</div>
+<p>where the line integral is taken along a path from one point to another. For the electric field, this is independent of path, so we can write:</p>
+<div class="math notranslate nohighlight">
+\[\Delta V = -\int_{\vec{r}_1}^{\vec{r}_2} \vec{E} \cdot d\vec{l} = V(\vec{r}_2) - V(\vec{r}_1)\]</div>
+<p>And</p>
+<div class="math notranslate nohighlight">
+\[\oint \vec{E} \cdot d\vec{l} = 0\]</div>
+<p>which is a direct results of applying Stokes’ Theorem to the curl-less electric field, and indicates that the electric field is conservative.</p>
+</section>
+</section>
+<section id="getting-to-laplace-s-equation">
+<h2>Getting to Laplace’s Equation<a class="headerlink" href="#getting-to-laplace-s-equation" title="Link to this heading">#</a></h2>
+<p>Poisson’s Equation is a description of a scalar potential (e.g., the electric potential) and how it relates to sources of the potential (e.g., charges). This is a <strong>local</strong> description of the field. At every point, the Laplacian can be computed (for well-behaved functions) and it indicates a source or lack of sources. For example, in empty space with no charges, the Laplacian is zero everywhere.</p>
+<p>So if we imagine setting up charges far from the place we are interested in finding the electric potential, we have an equation that is describes that space.</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 V = 0\]</div>
+<p>This is Laplace’s equation and is a commonly occurring equation in physics. In fact, as we saw here, it shows up anytime we find local situations where the charges are absent. So the idea is that charges are far away setting the potential at the boundaries (hence, calling these <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Boundary_value_problem">boundary value problems</a></strong>). The idea is that the PDE is solved in the region of interest often giving some general solution in the form of an infinite sum. The boundary conditions are then used to determine the coefficients in the solution, giving a unique solution. Because Laplace’s equation is a linear PDE, the superposition principle applies, so we can add solutions together to get new solutions.</p>
+<section id="a-typical-problem">
+<h3>A typical problem<a class="headerlink" href="#a-typical-problem" title="Link to this heading">#</a></h3>
+<p>It might seem odd to have an equation that is everywhere equal to zero and somehow suggest it produces non-zero solutions. But remember that it is a PDE that describes the second derivatives of this scalar function,</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 V = \frac{\partial^2 V}{\partial x^2} + \frac{\partial^2 V}{\partial y^2} + \frac{\partial^2 V}{\partial z^2} = 0\]</div>
+<p>It turns out there’s lots of functions that will satisfy that differential equation. And it’s mostly a matter of if the function fits the boundary conditions. Let’s look at a typical problem.</p>
+<p><img alt="Typical Laplace's Equation Problem" src="https://www.physics.uoguelph.ca/sites/default/files/uploads/fig10_1-parallel-plates.jpg" />
+<em>Image from <a class="reference external" href="https://www.physics.uoguelph.ca/chapter-10-laplaces-equation">University of Guelph</a></em></p>
+<p>Here is a “gutter” where the electric potential for different sides of the gutter are set. Laplace’s equation applies inside the gutter. So the idea is to find a solution that satisfies Laplace’s equation and the boundary conditions. We will develop this solution in class, but the representative results look like this:</p>
+<p><img alt="Typical Laplace's Equation Solution" src="https://www.physics.uoguelph.ca/sites/default/files/uploads/fig10_2_potential-plates.jpg" />
+<em>Image from <a class="reference external" href="https://www.physics.uoguelph.ca/chapter-10-laplaces-equation">University of Guelph</a></em></p>
+</section>
+</section>
+<section id="separation-of-variables">
+<h2>Separation of Variables<a class="headerlink" href="#separation-of-variables" title="Link to this heading">#</a></h2>
+<p>One of the key analytical tools that we have for Laplace’s Equation is the <a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_variables">separation of variables</a> method of solving PDEs. We posit an ansatz in which the solution is a product of functions of the individual variables. For example, in Cartesian coordinates, we might write:</p>
+<div class="math notranslate nohighlight">
+\[V(x,y,z) = X(x)Y(y)Z(z)\]</div>
+<p>And then we plug that into Laplace’s equation and see if we can find solutions. In this case, we get:</p>
+<div class="math notranslate nohighlight">
+\[\nabla^2 V = YZ\frac{d^2 X}{dx^2} + XZ\frac{d^2 Y}{dy^2} + XY\frac{d^2 Z}{dz^2} = 0\]</div>
+<p>which we divide by <span class="math notranslate nohighlight">\(XYZ\)</span> to obtain the following expression:</p>
+<div class="math notranslate nohighlight">
+\[\frac{1}{X}\frac{\partial^2 X}{\partial x^2} + \frac{1}{Y}\frac{\partial^2 Y}{\partial y^2} + \frac{1}{Z}\frac{\partial^2 Z}{\partial z^2} = 0\]</div>
+<p>Here each partial derivative is a of a pure function of a single variable. So we can conclude that each term is a constant that sum to zero. We can write this as:</p>
+<div class="math notranslate nohighlight">
+\[\frac{d^2 X}{d x^2} = -k_x^2X\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d^2 Y}{d y^2} = -k_y^2Y\]</div>
+<div class="math notranslate nohighlight">
+\[\frac{d^2 Z}{d z^2} = -k_z^2Z\]</div>
+<p>where <span class="math notranslate nohighlight">\(k_x^2 + k_y^2 + k_z^2 = 0\)</span>. We have converted our problem to a set of 3 ODEs that we know how to solve. We can then solve each of these equations separately and show a general solution is:</p>
+<div class="math notranslate nohighlight">
+\[X(x) = Ae^{ik_xx} + Be^{-ik_xx}\]</div>
+<div class="math notranslate nohighlight">
+\[Y(y) = Ce^{ik_yy} + De^{-ik_yy}\]</div>
+<div class="math notranslate nohighlight">
+\[Z(z) = Fe^{ik_zz} + Ge^{-ik_zz}\]</div>
+<p>where <span class="math notranslate nohighlight">\(A,B,C,D,E,F,G\)</span> are constants. We can then use the boundary conditions to determine the constants. Notice we wrote these as complex exponentials, those are sinusoidal or exponential solutions depending on if the resulting <span class="math notranslate nohighlight">\(k\)</span>’s are real or complex. The electric potential is a real measurable quantity.</p>
+<p>This general approach is well known and well-traveled territory. It’s working with these boundary conditions that can be tricky, and that we will practice. We will find that for most cases that we end up with infinite sums of these solutions. We will also find that we can use the <a class="reference external" href="https://en.wikipedia.org/wiki/Orthogonal_functions">orthogonality of the solutions</a> to simplify the solutions.</p>
+<p><strong>We should not suggest that every PDE can be solved with separation of variables, but rather that:</strong></p>
+<ul class="simple">
+<li><p>Separation of variables is a powerful tool for solving PDEs that you can try, but it might not work.</p></li>
+<li><p>It is a tool that can produce general solutions to Laplace’s Equation when the Laplacian is separable in the given coordinate system.</p></li>
+<li><p>It cannot be used for some problems (e.g., when the boundary conditions cannot be expressed as <a class="reference external" href="https://en.wikipedia.org/wiki/Neumann_boundary_condition">Neumann</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Dirichlet_boundary_condition">Dirichlet</a> boundary conditions).</p></li>
+</ul>
+<section id="other-coordinate-systems">
+<h3>Other Coordinate Systems<a class="headerlink" href="#other-coordinate-systems" title="Link to this heading">#</a></h3>
+<p>It turns out the trick of positing a solution that is a product of functions of the individual variables works in other coordinate systems as well. For example, in cylindrical coordinates, we might write:</p>
+<div class="math notranslate nohighlight">
+\[V(r,\theta,z) = R(r)\Theta(\theta)Z(z)\]</div>
+<p>Or in spherical coordinates, we might write:</p>
+<div class="math notranslate nohighlight">
+\[V(r,\theta,\phi) = R(r)\Theta(\theta)\Phi(\phi)\]</div>
+<p>It turns out both of these are separable in their respective coordinate systems. We will work through some examples of spherical coordinates in class as it forms the basis of the <a class="reference external" href="https://en.wikipedia.org/wiki/Multipole_expansion">Multipole Expansion</a>, which is a critical mathematical tool with wide applications.</p>
+<p>This idea of funding general solutions to Laplace’s equation in known orthogonal coordinate systems remains incredible common. Experimental setups and theoretical models often have situations where Laplace’s equation is relevant and there is a symmetry that can be exploited to find solutions. Laplace’s equation is separable in 13 coordinate systems. You can find some of the more <a class="reference external" href="https://en.wikipedia.org/wiki/Orthogonal_coordinates#Table_of_three-dimensional_orthogonal_coordinates">exotic equations and coordinate systems here</a>. Check out the <a class="reference external" href="https://en.wikipedia.org/wiki/Prolate_spheroidal_coordinates">Prolate Spheroidal coordinates</a>, which are used in nuclear physics when the nucleus is deformed.</p>
+<p><img alt="Prolate Spheroidal Coordinates" src="https://upload.wikimedia.org/wikipedia/commons/b/be/Prolate_spheroidal_coordinates.png" /></p>
+</section>
+</section>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
+<section id="textbook-chapter">
+<h3>Textbook Chapter<a class="headerlink" href="#textbook-chapter" title="Link to this heading">#</a></h3>
+<p>The University of Guelph provides free notes in physics. Here’s the <a class="reference external" href="https://www.physics.uoguelph.ca/chapter-10-laplaces-equation">relevant chapter on Laplace’s Equation</a>. It is also where some of the figures were taken from.</p>
+</section>
+<section id="videos-derivations">
+<h3>Videos Derivations<a class="headerlink" href="#videos-derivations" title="Link to this heading">#</a></h3>
+<p>Steve Brunton at Washington has some really great videos on the derivations associated with PDEs like those above.</p>
+<section id="possion-s-and-laplace-s-equation">
+<h4>Possion’s and Laplace’s Equation<a class="headerlink" href="#possion-s-and-laplace-s-equation" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://inv.tux.pizza/watch?v=nmvs0vrBT18"><img alt="Possion's and Laplace's Equation" src="https://markdown-videos-api.jorgenkh.no/youtube/nmvs0vrBT18?width=720&amp;height=405" /></a></p>
+<ul class="simple">
+<li><p>Non-Commercial Link: <a class="reference external" href="https://inv.tux.pizza/watch?v=nmvs0vrBT18?">https://inv.tux.pizza/watch?v=nmvs0vrBT18?</a></p></li>
+<li><p>Commercial Link: <a class="reference external" href="https://youtube.com/watch?v=nmvs0vrBT18?">https://youtube.com/watch?v=nmvs0vrBT18?</a></p></li>
+</ul>
+</section>
+<section id="id1">
+<h4>Separation of Variables<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="https://inv.tux.pizza/watch?v=VjWtMl6vQ3Q"><img alt="Separation of Variables" src="https://markdown-videos-api.jorgenkh.no/youtube/VjWtMl6vQ3Q?width=720&amp;height=405" /></a></p>
+<ul class="simple">
+<li><p>Non-Commercial Link: <a class="reference external" href="https://inv.tux.pizza/watch?v=VjWtMl6vQ3Q">https://inv.tux.pizza/watch?v=VjWtMl6vQ3Q</a></p></li>
+<li><p>Commercial Link: <a class="reference external" href="https://youtube.com/watch?v=VjWtMl6vQ3Q">https://youtube.com/watch?v=VjWtMl6vQ3Q</a></p></li>
+</ul>
+</section>
+</section>
+<section id="handwritten-notes">
+<h3>Handwritten Notes<a class="headerlink" href="#handwritten-notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../../_downloads/ee585f3207a964aa264645a281c2ac9c/Notes-Electric_Potential.pdf"><span class="xref download myst">Electric Potential</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/b73cc5512d109eaaf076a15344fdca74/Notes-Separation_of_Variables_Cartesian.pdf"><span class="xref download myst">Separation of Variables</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/bccdb55fe32cae6f8d34ee21c7936172/Notes-Separation_of_Variables_Spherical.pdf"><span class="xref download myst">Separation of Variables (Spherical Coordinates)</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../../_downloads/1567562bcbba2e3c300ed60a037c719f/Notes-Multipole_Expansion.pdf"><span class="xref download myst">Multipole Expansion</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./PHY415/2_EM/Statics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#electrostatics">Electrostatics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#electric-potential">Electric Potential</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-to-laplace-s-equation">Getting to Laplace’s Equation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-typical-problem">A typical problem</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-variables">Separation of Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-coordinate-systems">Other Coordinate Systems</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#textbook-chapter">Textbook Chapter</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#videos-derivations">Videos Derivations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#possion-s-and-laplace-s-equation">Possion’s and Laplace’s Equation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Separation of Variables</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#handwritten-notes">Handwritten Notes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Caroline Seidenzahl
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

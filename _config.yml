@@ -39,24 +39,3 @@ launch_buttons:
   jupyterhub_url            : "https://jupyterhub.egr.msu.edu/"  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   #thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
   colab_url                 : https://colab.research.google.com"" # The URL of Google Colab (https://colab.research.google.com)
-
-
-html:
-  use_repository_button: false
-  use_issues_button: false
-  use_edit_page_button: false
-  extra_footer: ""
-  navbar_number_sections: true
-  collapse_navigation: true
-  theme:
-    name: "sphinx_book_theme"
-    options:
-      collapse_navigation: true
-
-
-sphinx:
-  config:
-    html_theme_options:
-      # This disables numbering in sidebar and main content
-      numbered: false
-
